@@ -106,7 +106,11 @@ export default function Form() {
       <Button
         type="primary"
         htmlType="submit"
-        className={date.checkDate ? styles.greenButton : styles.yellowButton}
+        style={
+          date.checkDate
+            ? { backgroundColor: "#08e672" }
+            : { backgroundColor: "#efc41a" }
+        }
       >
         Submit
       </Button>

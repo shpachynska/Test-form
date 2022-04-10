@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.formElement {
+  margin-bottom: 20px;
+}
+
+.greenButton {
+  background-color: #08e672;
+  border-color: #08e672;
+}
+
+.greenButton:hover {
+  background-color: #069c4f;
+  border-color: #069c4f;
+}
+
+.yellowButton {
+  background-color: #efc41a;
+  border-color: #efc41a;
+}
+
+.yellowButton:hover {
+  background-color: #c9a205;
+  border-color: #c9a205;
+}

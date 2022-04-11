@@ -1,11 +1,12 @@
 import "antd/dist/antd.css";
 import { useForm, Controller, FormProvider } from "react-hook-form";
-import { Button, DatePicker, Select, Input } from "antd";
+import { Button, Select } from "antd";
 import { useState } from "react";
 import React from "react";
 import styles from "./Form.module.css";
 import RequiredInput from "./RequiredInput";
 import TextInput from "./TextInput";
+import MyDatePicker from "./DatePicker";
 
 const useDatePicker = () => {
   const [checkDate, setCheckDate] = useState(true);
@@ -25,7 +26,6 @@ const useSelect = () => {
 export default function Form() {
   const methods = useForm({ mode: "all" });
   const {
-    register,
     handleSubmit,
     control,
     formState: { errors },
@@ -70,11 +70,7 @@ export default function Form() {
             <p>Nie spełnione kryteria</p>
           )}
 
-          <DatePicker
-            {...register("datePicker")}
-            className={styles.formElement}
-            onChange={date.handleDatePick}
-          />
+          <MyDatePicker onChange={date.handleDatePick} />
 
           <Button
             type="primary"
